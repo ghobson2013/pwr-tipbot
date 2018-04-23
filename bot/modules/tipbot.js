@@ -339,7 +339,7 @@ function getValidatedAmount(amount, balance) {
  */
 function getValidatedMaxAmount(amount) {
     let maxTipPwrAmount = 50000000;
-    let minTipPwrAmount = 1;
+    let minTipPwrAmount = 1000;
     if (amount <= maxTipPwrAmount && amount >= minTipPwrAmount) {
         return amount
     } else {
@@ -614,7 +614,7 @@ function createTipLuck(message, tipper, words) {
         } else if (amountToValidate === "Over") {
             return message.reply("Um....you are WAY to high!");
         } else if (amountToValidate === "Under") {
-            return message.reply("Wow! You are one cheap person!");
+            return message.reply("Wow! You are one cheap person! Minimum 1000 PWR's");
         }
 
         let amount = parseFloat(amountToValidate).toFixed(8);
@@ -705,7 +705,7 @@ function createTipEach(message, tipper, words) {
         } else if (amountToValidate === "Over") {
             return message.reply("Um....you are WAY to high!");
         } else if (amountToValidate === "Under") {
-            return message.reply("Wow! You are one cheap person!");
+            return message.reply("Wow! You are one cheap person! Minimum 1000 PWR's");
         }
 
         let amount = parseFloat(amountToValidate).toFixed(8);
